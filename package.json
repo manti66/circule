@@ -1,0 +1,26 @@
+{
+  "name": "circule",
+  "version": "1.0.0",
+  "description": "JS Back-End first WorkShop",
+  "main": "index.js",
+  "scripts": {
+   "start" : "nodemon ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manti66/circule.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manti66/circule/issues"
+  },
+  "homepage": "https://github.com/manti66/circule#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
