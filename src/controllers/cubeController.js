@@ -1,9 +1,7 @@
 
 const router = require('express').Router();
-const cubes = require('../db.json')
-const fs = require('fs/promises');
-const path = require('path');
 
+const cubeServic = require('../service/cubeService')
 const { json, redirect } = require('express/lib/response');
 router.get('/create', (req, res) => {
     res.render('create')
@@ -17,8 +15,9 @@ router.post('/create', (req, res) => {
         return
     }
 
-    cubes.push(cube);
-    fs.writeFile(path.resolve('src', 'db.json'), JSON.stringify(cubes, " ", 4), {encoding: 'utf-8'})
+   
+   
+  cubeServic.save(cube)
         .then(()=>{
             res.redirect('/')
         })
@@ -27,6 +26,13 @@ router.post('/create', (req, res) => {
         })
 
 
-})
+});
+
+router.get('details/:id', (req, res)=>{
+ 
+
+    res.render('details')
+
+});
 
 module.exports = router;

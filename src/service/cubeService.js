@@ -8,3 +8,5 @@ exports.save =(cube)=>{
     fs.writeFile(path.resolve('src', 'db.json'), JSON.stringify(cubes, " ", 4), {encoding: 'utf-8'})
 
 }
+
+//exports.getOne = (cubeId)=> cubes[cubeId]
